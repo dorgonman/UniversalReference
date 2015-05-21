@@ -1,3 +1,30 @@
+/****************************************************************************
+MIT License
+Copyright (c) 2015 horizon-studio
+
+http://horizon-studio.net/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+****************************************************************************/
+
+
+
 #include <iostream>
 class Resource{
 
@@ -71,10 +98,10 @@ int main(){
     using namespace std;
     Widget origin;
 
-    myCopyFunc2(origin); // ©I¥svoid myCopyFunc2(Widget& param){
+    myCopyFunc2(origin); // call void myCopyFunc2(Widget& param)
     cout << origin.m_pHeapStorageResource->m_data.c_str() << endl;
     cout << origin.m_stackStorageResource.m_data.c_str() << endl;
-    myCopyFunc2(Widget());//©I¥svoid myCopyFunc2(Widget&& param){
+    myCopyFunc2(Widget());// call void myCopyFunc2(Widget&& param)
     cout << g_myBackupWidget.m_pHeapStorageResource->m_data.c_str() << endl;
     cout << g_myBackupWidget.m_stackStorageResource.m_data.c_str() << endl;
 
