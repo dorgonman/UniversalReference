@@ -23,11 +23,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-//http://stackoverflow.com/questions/3734247/what-are-all-the-member-functions-created-by-compiler-for-a-class-does-that-hap
 
+#include "vld.h"
+#include <stdlib.h>
+#include <crtdbg.h>
 #include <iostream>
 
 #define SAFE_DELETE(a) do { delete (a); (a) = NULL; } while (0)
+//http://stackoverflow.com/questions/3734247/what-are-all-the-member-functions-created-by-compiler-for-a-class-does-that-hap
 class Resource{
 public:
     Resource* deepCopy(){
@@ -69,7 +72,8 @@ public:
        /* There are two steps that takes place when Member Objects of a class are initialized inside the body of a constructor.
         1. Member Objects are allocated a memry / constructed and are given default values by the time when the control enters body of the constructor.
         2. Later on the actual initialization happens inside the body of the constructor i.e.user written initilization code that gets called.*/
-        : m_pHeapStorageResource(new Resource()){
+        : m_pHeapStorageResource(new Resource())
+        , m_i(0){
     }
 
     /** Copy constructor */
@@ -104,6 +108,7 @@ public:
     /** Move assignment operator */
     Widget& operator= (Widget&& other)
     {
+        Widget* test = &other;
         //memberwiseMove(other);//oops! will call memberwiseMove(Widget& other), other is lvalue because it has a name
         memberwiseMove(std::forward<Widget>(other));//forward rvalue to memberwiseMove
         return *this;
@@ -127,11 +132,9 @@ private:
 
     void memberwiseMove(Widget&& other){
         SAFE_DELETE(m_pHeapStorageResource);//safe release resource
-        std::swap(m_pHeapStorageResource, other.m_pHeapStorageResource);
-        //m_pHeapStorageResource = other.m_pHeapStorageResource; //move
-        //other.m_pHeapStorageResource = nullptr;
-
-
+        m_pHeapStorageResource = other.m_pHeapStorageResource; //move
+        other.m_pHeapStorageResource = nullptr;
+    
         //Did not benefit from move semantics,
         //because we didn't implement Move assignment operator for class Resource, so it will call it's own default Copy assignment operator(memberwiseCopy)
         m_stackStorageResource = other.m_stackStorageResource;  
@@ -141,11 +144,8 @@ private:
     //will call this function if you didn't use forward
     void memberwiseMove(Widget& other){
         SAFE_DELETE(m_pHeapStorageResource);//safe release resource
-        std::swap(m_pHeapStorageResource, other.m_pHeapStorageResource);
-        //m_pHeapStorageResource = other.m_pHeapStorageResource; //move
-        //other.m_pHeapStorageResource = nullptr;
-
-
+        m_pHeapStorageResource = other.m_pHeapStorageResource; //move
+        other.m_pHeapStorageResource = nullptr;
         m_stackStorageResource = other.m_stackStorageResource;
         m_i = other.m_i;
     }
@@ -160,6 +160,7 @@ public:
 int main(){
 
     Widget obj1;
+
     Widget obj2(obj1);// call Copy constructor
     Widget obj3;
     obj3 = obj1; // call Copy assignment operator
@@ -172,8 +173,5 @@ int main(){
 
     //call Move assignment operator, should not call obj2 again, because we mark obj2 move to obj5 here
     obj5 = std::move(obj2);
-
-
-    system("pause");
     return 0;
 }

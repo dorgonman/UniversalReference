@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tuto1_Move_semantics_2", "T
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tuto2_Rule_Of_Five", "Tuto2_Rule_Of_Five\Tuto2_Rule_Of_Five.vcxproj", "{951DA7E0-F270-4B2C-8956-8AE7BE4F1A72}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tuto2_Rule_of_zero", "Tuto2_Rule_of_zero\Tuto2_Rule_of_zero.vcxproj", "{F198CDFE-0356-4457-9F66-F3ED9FB559E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{951DA7E0-F270-4B2C-8956-8AE7BE4F1A72}.Debug|Win32.Build.0 = Debug|Win32
 		{951DA7E0-F270-4B2C-8956-8AE7BE4F1A72}.Release|Win32.ActiveCfg = Release|Win32
 		{951DA7E0-F270-4B2C-8956-8AE7BE4F1A72}.Release|Win32.Build.0 = Release|Win32
+		{F198CDFE-0356-4457-9F66-F3ED9FB559E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F198CDFE-0356-4457-9F66-F3ED9FB559E6}.Debug|Win32.Build.0 = Debug|Win32
+		{F198CDFE-0356-4457-9F66-F3ED9FB559E6}.Release|Win32.ActiveCfg = Release|Win32
+		{F198CDFE-0356-4457-9F66-F3ED9FB559E6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
