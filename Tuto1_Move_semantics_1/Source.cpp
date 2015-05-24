@@ -50,14 +50,14 @@ void myCopyFunc1(Widget param){
     }
     param.m_stackStorageResource.m_data = "myCopyFunc1 param stack storage: change data here will not change origin widget";
 }
-void myCopyFunc2(Widget& param){
+void myCopyFunc2(const Widget& param){
     g_myBackupWidget.m_pHeapStorageResource = param.m_pHeapStorageResource;
     g_myBackupWidget.m_stackStorageResource = param.m_stackStorageResource;
     g_myBackupWidget.m_i = param.m_i;
     if (param.m_pHeapStorageResource){
         param.m_pHeapStorageResource->m_data = "myCopyFunc2 param heap Storage: change data here will change origin widget";
     }
-    param.m_stackStorageResource.m_data = "myCopyFunc2 param stack storage: change data here will change origin widget";
+    //param.m_stackStorageResource.m_data = "myCopyFunc2 param stack storage: change data here will change origin widget";
 }
 void myCopyFunc3(Widget* param){
     g_myBackupWidget.m_pHeapStorageResource = param->m_pHeapStorageResource;
