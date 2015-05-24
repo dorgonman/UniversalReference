@@ -150,17 +150,7 @@ private:
     std::shared_ptr<Resource> m_resourcePtr;
 
 };
-#include <set>
-#include <chrono>
-std::multiset<std::string> names; // global data structure
-void logAndAdd(const std::string& name)
-{
-    auto now = // get current time
-        std::chrono::system_clock::now();
-    //log(now, "logAndAdd"); // make log entry
-    names.emplace(name); // add name to global data
-} // structure; see Item 42
-// for info on emplace
+
 int main(){
 
     {
