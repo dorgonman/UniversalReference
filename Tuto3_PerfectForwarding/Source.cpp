@@ -24,9 +24,7 @@ THE SOFTWARE.
 ****************************************************************************/
 
 
-#include "vld.h"
 #include <stdlib.h>
-#include <crtdbg.h>
 #include <iostream>
 #include <memory>
 
@@ -167,7 +165,7 @@ int main(){
         auto resourcePtr = std::make_shared<Resource>();
         widget.setResource(resourcePtr);
 
-        auto& resourcePtr1 = std::make_shared<Resource>();
+        const auto& resourcePtr1 = std::make_shared<Resource>();
         //widget.setResource(&resourcePtr1);
 
         auto&& resourcePtr2 = std::make_shared<Resource>();
@@ -198,7 +196,7 @@ int main(){
         //widget.setResource(resourcePtr); //compile error, rvalue reference version can't bind lvalue
     }
     {
-        TWidget<std::shared_ptr<Resource>&> widget;
+        TWidget<const std::shared_ptr<Resource>&> widget;
         widget.setResource(std::make_shared<Resource>());//will call lvalue reference version
         auto resourcePtr = std::make_shared<Resource>();
         widget.setResource(resourcePtr); //will call lvalue reference version
