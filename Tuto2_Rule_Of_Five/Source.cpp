@@ -24,9 +24,8 @@ THE SOFTWARE.
 ****************************************************************************/
 
 
-#include "vld.h"
+//#include "vld.h"
 #include <stdlib.h>
-#include <crtdbg.h>
 #include <iostream>
 
 #define SAFE_DELETE(a) do { delete (a); (a) = NULL; } while (0)
