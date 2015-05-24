@@ -71,9 +71,6 @@ public:
         , m_i(0){
 
     }
-
-    /** Destructor */
-    ~Widget(){};
  
 
 
