@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tuto3_PerfectForwarding", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tuto4_UR_and_Type_Trait", "Tuto4_UR_and_Type_Trait\Tuto4_UR_and_Type_Trait.vcxproj", "{2E8E5CB8-24EF-4F05-974B-6E0623BBE953}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testbed", "testbed\testbed.vcxproj", "{355D772D-E32C-4FCD-AD15-7E740A2B7D9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -45,6 +47,10 @@ Global
 		{2E8E5CB8-24EF-4F05-974B-6E0623BBE953}.Debug|Win32.Build.0 = Debug|Win32
 		{2E8E5CB8-24EF-4F05-974B-6E0623BBE953}.Release|Win32.ActiveCfg = Release|Win32
 		{2E8E5CB8-24EF-4F05-974B-6E0623BBE953}.Release|Win32.Build.0 = Release|Win32
+		{355D772D-E32C-4FCD-AD15-7E740A2B7D9E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{355D772D-E32C-4FCD-AD15-7E740A2B7D9E}.Debug|Win32.Build.0 = Debug|Win32
+		{355D772D-E32C-4FCD-AD15-7E740A2B7D9E}.Release|Win32.ActiveCfg = Release|Win32
+		{355D772D-E32C-4FCD-AD15-7E740A2B7D9E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

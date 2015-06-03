@@ -1,3 +1,7 @@
 Debug
 *.opensdf
 *.sdf
+/Release
+/testbed/Release
+/Tuto3_PerfectForwarding/Release
+/Tuto4_UR_and_Type_Trait/Release
