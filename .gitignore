@@ -5,3 +5,7 @@ Debug
 /testbed/Release
 /Tuto3_PerfectForwarding/Release
 /Tuto4_UR_and_Type_Trait/Release
+/testbed/proj.linux
+/testbed/proj.win32
+/proj.win32
+/build

@@ -1,0 +1,4 @@
+test, memcpy: 3.424e-05 second
+test, memmove: 2.786e-06 second
+test, str copy: 0.220534 second
+test, str move: 0.187405 second
