@@ -1,14 +1,22 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 PROJECT (testbed CXX)
 
+include(../cmake/UtilMacro.cmake)
 
-set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
-set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cpp)
+include(../cmake/CommonSetting.cmake)
 
-SET (PROJ_SRCS cpp/Source.cpp)
-IF(UNIX)
-	set (CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -O2 -g -Wall")
-ENDIF()
+
+
+file(GLOB PROJ_SRCS
+    "cpp/*.h"
+    "cpp/*.cpp"
+    "cpp/test/*.cpp"
+    "cpp/test2/*.cpp"
+)
+
+
+
+source_group_by_dir(PROJ_SRCS)
 
 ADD_EXECUTABLE (testbed ${PROJ_SRCS})
 

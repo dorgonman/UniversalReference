@@ -1,0 +1,5 @@
+set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
+set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cpp)
+IF(UNIX)
+	set (CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -O2 -g -Wall")
+ENDIF()
