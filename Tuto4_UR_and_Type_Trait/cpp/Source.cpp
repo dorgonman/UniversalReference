@@ -113,7 +113,7 @@ int main(){
     widget.setResource(newRes); //ok
 
 
-    widget.setResource("test"); //oops! should compile error
+    //widget.setResource("test"); //oops! should compile error
    // auto newRes2 = std::make_shared<SpecialResource>();
 
     //widget.setResource(newRes2);
