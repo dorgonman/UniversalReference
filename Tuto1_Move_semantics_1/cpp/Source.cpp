@@ -93,6 +93,6 @@ int main(){
     cout << origin.m_stackStorageResource.m_data.c_str() << endl;
     delete origin.m_pHeapStorageResource;
     origin.m_pHeapStorageResource = nullptr;
-    system("pause");
+    //system("pause");
     return 0;
 }

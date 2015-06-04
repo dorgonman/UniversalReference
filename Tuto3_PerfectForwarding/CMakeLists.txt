@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
-PROJECT (testbed CXX)
+PROJECT (Tuto3_PerfectForwarding CXX)
 
 
 set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
@@ -10,5 +10,5 @@ IF(UNIX)
 	set (CMAKE_CXX_FLAGS "-std=c++0x -stdlib=libc++ -O2 -g -Wall")
 ENDIF()
 
-ADD_EXECUTABLE (testbed ${PROJ_SRCS})
+ADD_EXECUTABLE (Tuto3_PerfectForwarding ${PROJ_SRCS})
 

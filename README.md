@@ -4,6 +4,9 @@ reference code for UniversalReference describe in my blog:
 http://dorgon.horizon-studio.net/section/cuniversalreference
 
 
+please use cmake to generate project file, you can generate win32 and linux projec by execute shell scripts under project_generator.
+
+
 MIT License
 Copyright (c) 2015 horizon-studio
 
