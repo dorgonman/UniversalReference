@@ -26,7 +26,6 @@ THE SOFTWARE.
 
 //#include "vld.h"
 #include <stdlib.h>
-#include <crtdbg.h>
 #include <iostream>
 #include <memory>
 
