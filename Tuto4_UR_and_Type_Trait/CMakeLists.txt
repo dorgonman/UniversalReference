@@ -9,3 +9,4 @@ SET (PROJ_SRCS cpp/Source.cpp)
 
 ADD_EXECUTABLE (Tuto4_UR_and_Type_Trait ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)

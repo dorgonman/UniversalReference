@@ -1,14 +1,9 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
-PROJECT (testbed CXX)
+PROJECT (LibCommonUtil CXX)
 
 include(../cmake/UtilMacro.cmake)
 
 include(../cmake/CommonSetting.cmake)
-
-
-
-
-
 
 file(GLOB PROJ_SRCS
  	"cpp/Public/*.h"
@@ -25,7 +20,8 @@ file(GLOB PLATFORM_SRCS
 
 source_group_by_dir(PLATFORM_SRCS)
 
-add_executable(testbed ${PLATFORM_SRCS} ${PROJ_SRCS})
+add_executable(LibCommonUtil ${PLATFORM_SRCS} ${PROJ_SRCS})
+add_library(LibCommonUtilShared SHARED ${PROJ_SRCS})
+add_library(LibCommonUtilStatic STATIC ${PROJ_SRCS})
 
-
-include(../cmake/CommonLink.cmake)
+#generate_export_header(LibCommonUtil EXPORT_FILE_NAME ${CMAKE_BINARY_DIR}/LibCommonUtil/cpp/Public/Timer.h)

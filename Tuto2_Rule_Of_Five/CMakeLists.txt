@@ -9,3 +9,4 @@ SET (PROJ_SRCS cpp/Source.cpp)
 
 ADD_EXECUTABLE (Tuto2_Rule_Of_Five ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)

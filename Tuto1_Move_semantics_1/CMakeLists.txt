@@ -11,3 +11,4 @@ ENDIF()
 
 ADD_EXECUTABLE (Tuto1_Move_semantics_1 ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)

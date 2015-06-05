@@ -8,3 +8,4 @@ SET (PROJ_SRCS cpp/Source.cpp)
 
 ADD_EXECUTABLE (Tuto3_PerfectForwarding ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)

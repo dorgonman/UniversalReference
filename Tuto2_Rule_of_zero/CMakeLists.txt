@@ -8,3 +8,4 @@ SET (PROJ_SRCS cpp/Source.cpp)
 
 ADD_EXECUTABLE (Tuto2_Rule_of_zero ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)

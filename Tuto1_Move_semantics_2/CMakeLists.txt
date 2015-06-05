@@ -9,3 +9,4 @@ SET (PROJ_SRCS cpp/Source.cpp)
 
 ADD_EXECUTABLE (Tuto1_Move_semantics_2 ${PROJ_SRCS})
 
+include(../cmake/CommonLink.cmake)
