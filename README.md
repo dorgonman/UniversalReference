@@ -8,9 +8,9 @@ please use cmake to generate project file, you can generate win32 and linux proj
 
 
 MIT License
-Copyright (c) 2015 horizon-studio
+Copyright (c) 2015 dorgon
 
-http://horizon-studio.net/
+http://dorgon.horizon-studio.net/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
